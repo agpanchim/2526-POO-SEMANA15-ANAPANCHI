@@ -8,7 +8,7 @@ class AppTkinter:
     def __init__(self, root, servicio):
         self.root = root
         self.servicio = servicio
-        self.root.title("Agenda Universitaria - Prioridades")
+        self.root.title("Agenda Universitaria ")
         self.root.geometry("800x550")  # Un poco más ancho para la tabla
 
         self._configurar_estilos()
