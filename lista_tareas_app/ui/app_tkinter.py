@@ -9,8 +9,7 @@ class AppTkinter:
         self.root = root
         self.servicio = servicio
         self.root.title("Agenda Universitaria ")
-        self.root.geometry("800x550")  # Un poco más ancho para la tabla
-
+        self.root.geometry("800x550")  # ancho para la tabla
         self._configurar_estilos()
         self._crear_widgets()
         self._vincular_eventos()
@@ -57,8 +56,8 @@ class AppTkinter:
         frame_botones.pack(pady=10)
 
         # Botón Añadir (Acción principal)
-        self.btn_add = tk.Button(frame_botones, text="Añadir Tarea", command=self.manejador_añadir,
-                                 bg="#2ecc71", fg="white", width=15, font=("Arial", 10, "bold"))
+        self.btn_add = tk.Button(frame_botones, text="Añadir Tarea", command=self.manejador_añadir, bg="#2ecc71",
+                                 fg="white", width=15, font=("Arial", 10, "bold"))
         self.btn_add.pack(side=tk.LEFT, padx=5)
 
         # Botón Marcar Completada
@@ -86,6 +85,7 @@ class AppTkinter:
         self.tabla.tag_configure("Media", background="#ffffcc")
         self.tabla.tag_configure("Baja", background="#ccffcc")
         self.tabla.tag_configure("Completada", foreground="gray", background="#f0f0f0")
+
     def _vincular_eventos(self):
         self.ent_desc.bind("<Return>", lambda e: self.manejador_añadir())
         self.tabla.bind("<Double-1>", lambda e: self.manejador_completar())
