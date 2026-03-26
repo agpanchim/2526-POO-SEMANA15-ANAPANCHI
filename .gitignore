@@ -1,0 +1,7 @@
+# Ignorar específicamente la carpeta build
+lista_tareas_app/build/
+build/
+.venv/
+.idea/
+__pycache__/
+*.spec
